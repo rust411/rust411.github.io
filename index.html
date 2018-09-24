@@ -39,8 +39,9 @@
             <div class="col-sm-4 pull-right  col-xs-5">
               <div class="header_right text-right">
                 <div class="login_buttons">
-                <a class="loginBtn" href="#">Login</a>
-                <a class="registerBtn" href="#">Register</a>
+                <a class="one_pager_btn" href="#">One Pager</a>
+                <a class="loginBtn" data-toggle="modal" data-target="#login_popup">Login</a>
+                <a class="registerBtn" data-toggle="modal" data-target="#register_popup">Register</a>
                 </div>
               </div>
             </div>
@@ -63,6 +64,7 @@
           </div>
           <div class="main_menu">
             <ul>
+              <li class="visible-xs light_blue"><a href="#">One Pager</a></li>
               <li class="active"><a href="#mainBanner">Home</a></li>
               <li><a href="#">Digital Asset Vault</a></li>
               <li><a href="#securitySec">Security</a></li>
@@ -127,16 +129,123 @@
               <p>Our platform will continously improve its knowledge of global Wi-Fi networks, allowing us to select the most optimal Wi-Fi networks in real time</p>
               <div class="main_banner_actions">
                 <a href="#"><img src="images/PlayStore.btn.png"></a>
-                <a href="#"><img src="images/App Store.btn.png"></a>
+                <a href="#"><img src="images/App-Store.btn.png"></a>
               </div>
+            </div>
+            <div class="text-center scroll_down">
+              <a href="#DigitalAssetSec"><i class="fa fa-angle-down"></i></a>
+            </div>
+        </div>
+    </section><!-- /. Main banner -->
+
+<!-- Login popup -->
+<div class="modal fade custom_popup login_popup_wrap" id="login_popup" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+          <form>
+              <h3 class="modal-title">Welcome to FreeMyWifi</h3>
+              <p>Login</p>
+              <div class="form-group">
+                  <input class="form-control" type="email" name="email" value="" placeholder="E-Mail">
+              </div>
+              <div class="form-group">
+                  <input class="form-control" type="password" name="password" value="" placeholder="Password">
+              </div>
+              <p class="text-center"><a href="#">Did you forget your password?</a></p>
+              <button type="submit" class="btn">Login</button>
+              <div class="login_botton">
+                  <p>Don't you have an account?</p>
+                  <a href="#" class="btn">Create Account</a>
+              </div>
+           </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Register popup -->
+<div class="modal fade custom_popup login_popup_wrap" id="register_popup" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <form>
+              <h3 class="modal-title text-center">Welcome to FreeMyWifi</h3>
+              <p>Please Create Account to continue</p>
+              <div class="row">
+                  <div class="col-sm-6">
+                     <div class="form-group">
+                       <input class="form-control" type="text" name="name" value="" placeholder="Name">
+                     </div>
+                  </div>
+                  <div class="col-sm-6">
+                     <div class="form-group">
+                       <input class="form-control" type="text" name="sur name" value="" placeholder="Surname">
+                     </div>
+                  </div>
+              </div>
+              <div class="form-group">
+                  <input class="form-control" type="email" name="email" value="" placeholder="E-Mail">
+              </div>
+              <div class="form-group">
+                  <input class="form-control" type="password" name="password" value="" placeholder="Password">
+              </div>
+              <div class="form-group">
+                  <input class="form-control" type="password" name="repeat password" value="" placeholder="Repeat Password">
+              </div>
+               <button type="submit" class="btn">Create Account</button>
+               <p>By clicking "Create Account", you agree to our <a href="#">Term &amp; Conditions</a> and <a href="#">Privacy Policy.</a></p>
+           </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="main_bg">
+
+    <!-- Digital Asset sec -->
+    <section id="DigitalAssetSec" class="digital_asset_sec">
+        <div class="container-fluid">
+            <h2 class="sec-heading">Digital Asset Vault</h2>
+            <div class="row">
+                <div class="col-lg-3 col-md-4 col-sm-4">
+                  <div class="digital_content">
+                    <p>FreeMyWifi provides a free, Secure and Private Valut.Manage your Digital assets in an easy user-friendly way, keep your data private powered by Organism Multiplex.</p>
+                  </div>
+                </div>
+                <div class="col-lg-9 col-md-8 col-sm-8">
+                     <div class="digital_right text-center">
+                        <div class="digital_right_img">
+                              <img class="digital_img" src="images/digital-right_bg.png" alt="digital">
+                              <div class="iphone_slider">
+                                  <div class="ipone_slide">
+                                     <img src="images/digital-slide.png" alt="slide">
+                                  </div>
+                                  <div class="ipone_slide">
+                                     <img src="images/digital-slide.png" alt="slide">
+                                  </div>
+                                  <div class="ipone_slide">
+                                     <img src="images/digital-slide.png" alt="slide">
+                                  </div>
+                              </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="text-center scroll_down">
               <a href="#securitySec"><i class="fa fa-angle-down"></i></a>
             </div>
         </div>
-    </section><!-- /. Main banner -->
+    </section><!-- /. Digital Asset sec -->
 
-<div class="main_bg">
+
     <!-- Security sec -->
     <section id="securitySec" class="security_sec">
         <div class="container-fluid">
@@ -174,7 +283,7 @@
     <section id="videoSec" class="video_sec">
         <div class="container-fluid">
             <h2 class="sec-heading">Watch Video</h2>
-            <a href="#">
+            <a data-toggle="modal" data-target="#video_popup">
               <div class="video_wrap">
                 <img src="images/video_img.jpg" alt="video">
                 <div class="video_icon"><img src="images/play_btn.png" alt="play"></div>
@@ -184,6 +293,21 @@
               <a href="#whyWifiSec"><i class="fa fa-angle-down"></i></a>
             </div>
         </div>
+
+        <div class="modal fade custom_popup video_popup" id="video_popup" role="dialog">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header text-center">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="420" height="345" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
     </section><!-- /. watch video sec -->
 
     <!-- Security sec -->
