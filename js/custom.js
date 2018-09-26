@@ -151,7 +151,22 @@ if ($(window).width() < 768) {
       autoplay: false,
       fade:false,
       autoplaySpeed: 4000
+    });
+
+   $('.iphone_slider').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      asNavFor: '.slider-for',
+      dots: true,
+      arrows: false,
+      vertical: false,
+      centerMode: false,
+      focusOnSelect: true,
+      autoplay: false,
+      fade:true,
+      autoplaySpeed: 4000
     }); 
+
  $('.faq_slider').slick({
       slidesToShow: 1,
       slidesToScroll: 1,
